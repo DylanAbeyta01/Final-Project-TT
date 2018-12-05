@@ -18,7 +18,6 @@ public class player1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         velocity = rbody.velocity;
         if (Input.GetKey(KeyCode.E))
         {
