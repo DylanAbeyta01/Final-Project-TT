@@ -72,6 +72,9 @@
     <Reference Include="Unity.PackageManagerUI.Editor">
       <HintPath>C:/Users/185236/Documents/Final Project/Final Project TT/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.PackageManagerUI.Editor">
+      <HintPath>C:/Users/166097/Documents/Final Project 12-3-18/Final Project TT/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
     </Reference>
