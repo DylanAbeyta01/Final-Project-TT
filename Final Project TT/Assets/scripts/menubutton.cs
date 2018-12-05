@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayButton : MonoBehaviour
+public class menubutton : MonoBehaviour
 {
 
 	// Use this for initialization
@@ -15,11 +15,10 @@ public class PlayButton : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-
-    }
-
-    public void OnButtonClick()
+		
+	}
+    public void menuButtonClick()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("menu");
     }
 }
