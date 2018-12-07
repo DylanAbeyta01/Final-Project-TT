@@ -8,6 +8,11 @@ public class player2 : MonoBehaviour
     Vector3 velocity = new Vector3(0, 0, 0);
     Rigidbody2D rbody;
 
+    private void Awake()
+    {
+        GameManager.Instance.MyCharacter2 = this;
+    }
+
     // Use this for initialization
     void Start()
     {

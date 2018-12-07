@@ -11,7 +11,6 @@ public class player1 : MonoBehaviour
     private void Awake()
     {
         GameManager.Instance.MyCharacter1 = this;
-        GameManager.Instance.MyCharacter2 =;
     }
 
     // Use this for initialization
