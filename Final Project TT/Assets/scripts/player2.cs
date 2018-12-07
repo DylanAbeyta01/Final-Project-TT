@@ -7,6 +7,7 @@ public class player2 : MonoBehaviour
     float speed = 2;
     Vector3 velocity = new Vector3(0, 0, 0);
     Rigidbody2D rbody;
+    public GameObject BulletPrefab;
 
     private void Awake()
     {
@@ -14,7 +15,7 @@ public class player2 : MonoBehaviour
     }
 
     // Use this for initialization
-    void Start()
+    void Start() 
     {
         rbody = GetComponent<Rigidbody2D>();
     }
@@ -48,5 +49,16 @@ public class player2 : MonoBehaviour
     public Vector3 LookAtDirection(float eulerAnglesZ)
     {
         return new Vector3(Mathf.Cos(eulerAnglesZ * Mathf.Deg2Rad), Mathf.Sin(eulerAnglesZ * Mathf.Deg2Rad), 0);
+    }
+
+    void ShootBalls()
+    {
+        transform.position += velocity * Time.deltaTime * speed;
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            GameObject newBullet = Instantiate(BulletPrefab);
+            newBullet.GetComponent<Bullet>().Initialize(transform.position, LookAtDirection(transform.eulerAngles.z - 90), Color.green);
+        }
     }
 }
