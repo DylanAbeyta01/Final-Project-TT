@@ -18,7 +18,7 @@ public class Bullet : MonoBehaviour
     {
         transform.position += velocity * Time.deltaTime * speed;
 
-        float distance = Vector3.Distance(transform.position, GameManager.Instance.MyCharacter1.transform.position);
+        //float distance = Vector3.Distance(transform.position, GameManager.Instance.MyCharacter1.transform.position);
 
         if (Time.deltaTime > 7)
         {

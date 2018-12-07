@@ -7,10 +7,18 @@ public class player2 : MonoBehaviour
     float speed = 2;
     Vector3 velocity = new Vector3(0, 0, 0);
     Rigidbody2D rbody;
+<<<<<<< HEAD
+=======
+
+>>>>>>> de0940d711f6b9b243b66e36006e4ae99535c5b0
     private void Awake()
     {
         GameManager.Instance.MyCharacter2 = this;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> de0940d711f6b9b243b66e36006e4ae99535c5b0
     // Use this for initialization
     void Start()
     {
