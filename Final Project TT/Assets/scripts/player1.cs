@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class player1 : MonoBehaviour
 {
-    float speed = 5;
-
+    float speed = 2.5f;
     Vector3 velocity = new Vector3(0, 0, 0);
     Rigidbody2D rbody;
 
@@ -18,30 +17,32 @@ public class player1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        velocity = rbody.velocity;
-        if (Input.GetKey(KeyCode.E))
+
+        velocity = new Vector3(0, 0, 0);
+
+        if (Input.GetKey(KeyCode.S))
         {
-            velocity += Vector3.up * Time.deltaTime * speed;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            velocity -= Vector3.up * Time.deltaTime * speed;
+            transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z + 200 * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.F))
         {
-            velocity -= Vector3.right * Time.deltaTime * speed;
+            transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z - 200 * Time.deltaTime);
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.E))
         {
-            velocity += Vector3.right * Time.deltaTime * speed;
+            velocity += LookAtDirection(transform.eulerAngles.z - 90);
         }
-        if (!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.D))
         {
-            velocity = new Vector3(velocity.x * (1 - Time.deltaTime * 10), velocity.y * (1 - Time.deltaTime * 10), 0);
+            velocity -= LookAtDirection(transform.eulerAngles.z - 90);
         }
-        rbody.velocity = new Vector3(Mathf.Clamp(velocity.x, -speed, speed), Mathf.Clamp(velocity.y, -speed, speed), 0);
 
-
+        velocity.Normalize();
+        rbody.velocity = velocity * speed;
+    }
+    public Vector3 LookAtDirection(float eulerAnglesZ)
+    {
+        return new Vector3(Mathf.Cos(eulerAnglesZ * Mathf.Deg2Rad), Mathf.Sin(eulerAnglesZ * Mathf.Deg2Rad), 0);
     }
 }
 
