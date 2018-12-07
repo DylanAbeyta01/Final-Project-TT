@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Random = System.Random;
 
 public class PlayButton : MonoBehaviour
 {
@@ -20,6 +21,9 @@ public class PlayButton : MonoBehaviour
 
     public void OnButtonClick()
     {
-        SceneManager.LoadScene("SampleScene");
+        Random rand = new Random();
+        int rand1to5 = rand.Next(1, 2);
+        
+        SceneManager.LoadScene("Map " + rand1to5);
     }
 }
