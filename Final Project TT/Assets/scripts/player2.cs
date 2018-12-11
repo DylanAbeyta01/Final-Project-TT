@@ -20,6 +20,18 @@ public class player2 : MonoBehaviour
         rbody = GetComponent<Rigidbody2D>();
     }
 
+    //void OnCollisionEnter(Collision col)
+    //{
+    //    if (col.gameObject.name == "wally")
+    //    {
+    //        rbody.velocity = velocity * (speed - 1.15f);
+    //    }
+    //}
+    //void OnCollisionExit(Collision collisionInfo)
+    //{
+    //    rbody.velocity = velocity * speed;
+    //}
+
     // Update is called once per frame
     void Update()
     {
@@ -44,8 +56,16 @@ public class player2 : MonoBehaviour
         }
 
         velocity.Normalize();
-        rbody.velocity = velocity * speed;
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            rbody.velocity = velocity * (speed - 1.15f);
+        }                     
+        else
+        {
+            rbody.velocity = velocity * speed;
+        }
     }
+
     public Vector3 LookAtDirection(float eulerAnglesZ)
     {
         return new Vector3(Mathf.Cos(eulerAnglesZ * Mathf.Deg2Rad), Mathf.Sin(eulerAnglesZ * Mathf.Deg2Rad), 0);

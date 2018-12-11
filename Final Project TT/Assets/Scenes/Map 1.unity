@@ -123,9 +123,9 @@ GameObject:
   - component: {fileID: 6351622}
   - component: {fileID: 6351624}
   - component: {fileID: 6351623}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -213,56 +213,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!1001 &6539257
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4409995231512776, guid: b3a4f63e336b5f84d86eed1b1dd1ff35, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -2.54
-      objectReference: {fileID: 0}
-    - target: {fileID: 4409995231512776, guid: b3a4f63e336b5f84d86eed1b1dd1ff35, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -3.49
-      objectReference: {fileID: 0}
-    - target: {fileID: 4409995231512776, guid: b3a4f63e336b5f84d86eed1b1dd1ff35, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4409995231512776, guid: b3a4f63e336b5f84d86eed1b1dd1ff35, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4409995231512776, guid: b3a4f63e336b5f84d86eed1b1dd1ff35, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4409995231512776, guid: b3a4f63e336b5f84d86eed1b1dd1ff35, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4409995231512776, guid: b3a4f63e336b5f84d86eed1b1dd1ff35, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4409995231512776, guid: b3a4f63e336b5f84d86eed1b1dd1ff35, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4409995231512776, guid: b3a4f63e336b5f84d86eed1b1dd1ff35, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.14492002
-      objectReference: {fileID: 0}
-    - target: {fileID: 4409995231512776, guid: b3a4f63e336b5f84d86eed1b1dd1ff35, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.14632456
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: b3a4f63e336b5f84d86eed1b1dd1ff35, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &54930043
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,9 +223,9 @@ GameObject:
   - component: {fileID: 54930044}
   - component: {fileID: 54930046}
   - component: {fileID: 54930045}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (5)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -373,9 +323,9 @@ GameObject:
   - component: {fileID: 132944622}
   - component: {fileID: 132944624}
   - component: {fileID: 132944623}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (10)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -473,9 +423,9 @@ GameObject:
   - component: {fileID: 133031141}
   - component: {fileID: 133031143}
   - component: {fileID: 133031142}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (29)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -573,9 +523,9 @@ GameObject:
   - component: {fileID: 203404993}
   - component: {fileID: 203404995}
   - component: {fileID: 203404994}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (16)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -673,9 +623,9 @@ GameObject:
   - component: {fileID: 222561557}
   - component: {fileID: 222561559}
   - component: {fileID: 222561558}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (32)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -773,9 +723,9 @@ GameObject:
   - component: {fileID: 286394923}
   - component: {fileID: 286394925}
   - component: {fileID: 286394924}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (11)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -873,9 +823,9 @@ GameObject:
   - component: {fileID: 308825134}
   - component: {fileID: 308825136}
   - component: {fileID: 308825135}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (3)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1035,9 +985,9 @@ GameObject:
   - component: {fileID: 334863500}
   - component: {fileID: 334863502}
   - component: {fileID: 334863501}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (25)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1135,9 +1085,9 @@ GameObject:
   - component: {fileID: 554894039}
   - component: {fileID: 554894041}
   - component: {fileID: 554894040}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (23)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1235,9 +1185,9 @@ GameObject:
   - component: {fileID: 652200796}
   - component: {fileID: 652200798}
   - component: {fileID: 652200797}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (13)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1335,9 +1285,9 @@ GameObject:
   - component: {fileID: 715931049}
   - component: {fileID: 715931051}
   - component: {fileID: 715931050}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (28)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1439,7 +1389,7 @@ GameObject:
   - component: {fileID: 740827859}
   m_Layer: 8
   m_Name: green tank
-  m_TagString: Untagged
+  m_TagString: tank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1500,7 +1450,7 @@ Transform:
   m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &740827857
 MonoBehaviour:
@@ -1570,9 +1520,9 @@ GameObject:
   - component: {fileID: 807877253}
   - component: {fileID: 807877255}
   - component: {fileID: 807877254}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (37)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1670,9 +1620,9 @@ GameObject:
   - component: {fileID: 898530240}
   - component: {fileID: 898530242}
   - component: {fileID: 898530241}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (15)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1770,9 +1720,9 @@ GameObject:
   - component: {fileID: 920158009}
   - component: {fileID: 920158011}
   - component: {fileID: 920158010}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (8)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1870,9 +1820,9 @@ GameObject:
   - component: {fileID: 932868244}
   - component: {fileID: 932868246}
   - component: {fileID: 932868245}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (7)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1970,9 +1920,9 @@ GameObject:
   - component: {fileID: 934974969}
   - component: {fileID: 934974971}
   - component: {fileID: 934974970}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (34)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2070,9 +2020,9 @@ GameObject:
   - component: {fileID: 977569248}
   - component: {fileID: 977569250}
   - component: {fileID: 977569249}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (30)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2170,9 +2120,9 @@ GameObject:
   - component: {fileID: 1052797586}
   - component: {fileID: 1052797588}
   - component: {fileID: 1052797587}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (33)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2270,9 +2220,9 @@ GameObject:
   - component: {fileID: 1169431806}
   - component: {fileID: 1169431808}
   - component: {fileID: 1169431807}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (18)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2398,9 +2348,9 @@ GameObject:
   - component: {fileID: 1250394818}
   - component: {fileID: 1250394820}
   - component: {fileID: 1250394819}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (17)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2569,56 +2519,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1348213568
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4692098619357470, guid: 094d78d97f7847b4b9296e57d44ea185, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 3.322
-      objectReference: {fileID: 0}
-    - target: {fileID: 4692098619357470, guid: 094d78d97f7847b4b9296e57d44ea185, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 3.158
-      objectReference: {fileID: 0}
-    - target: {fileID: 4692098619357470, guid: 094d78d97f7847b4b9296e57d44ea185, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4692098619357470, guid: 094d78d97f7847b4b9296e57d44ea185, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4692098619357470, guid: 094d78d97f7847b4b9296e57d44ea185, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4692098619357470, guid: 094d78d97f7847b4b9296e57d44ea185, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4692098619357470, guid: 094d78d97f7847b4b9296e57d44ea185, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4692098619357470, guid: 094d78d97f7847b4b9296e57d44ea185, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4692098619357470, guid: 094d78d97f7847b4b9296e57d44ea185, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.1463246
-      objectReference: {fileID: 0}
-    - target: {fileID: 4692098619357470, guid: 094d78d97f7847b4b9296e57d44ea185, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.14492
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 094d78d97f7847b4b9296e57d44ea185, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1354291719
 GameObject:
   m_ObjectHideFlags: 0
@@ -2629,9 +2529,9 @@ GameObject:
   - component: {fileID: 1354291720}
   - component: {fileID: 1354291722}
   - component: {fileID: 1354291721}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (14)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2729,9 +2629,9 @@ GameObject:
   - component: {fileID: 1360177225}
   - component: {fileID: 1360177227}
   - component: {fileID: 1360177226}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (2)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2829,9 +2729,9 @@ GameObject:
   - component: {fileID: 1417865080}
   - component: {fileID: 1417865082}
   - component: {fileID: 1417865081}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (6)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2929,9 +2829,9 @@ GameObject:
   - component: {fileID: 1460125943}
   - component: {fileID: 1460125945}
   - component: {fileID: 1460125944}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (12)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3029,9 +2929,9 @@ GameObject:
   - component: {fileID: 1484763681}
   - component: {fileID: 1484763683}
   - component: {fileID: 1484763682}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (24)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3129,9 +3029,9 @@ GameObject:
   - component: {fileID: 1496505941}
   - component: {fileID: 1496505943}
   - component: {fileID: 1496505942}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (31)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3229,9 +3129,9 @@ GameObject:
   - component: {fileID: 1506010019}
   - component: {fileID: 1506010021}
   - component: {fileID: 1506010020}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (21)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3438,9 +3338,9 @@ GameObject:
   - component: {fileID: 1597047897}
   - component: {fileID: 1597047899}
   - component: {fileID: 1597047898}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (9)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3538,9 +3438,9 @@ GameObject:
   - component: {fileID: 1664439780}
   - component: {fileID: 1664439782}
   - component: {fileID: 1664439781}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (1)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3638,9 +3538,9 @@ GameObject:
   - component: {fileID: 1667692689}
   - component: {fileID: 1667692691}
   - component: {fileID: 1667692690}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (35)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3738,9 +3638,9 @@ GameObject:
   - component: {fileID: 1696831192}
   - component: {fileID: 1696831194}
   - component: {fileID: 1696831193}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (27)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3838,9 +3738,9 @@ GameObject:
   - component: {fileID: 1726822961}
   - component: {fileID: 1726822963}
   - component: {fileID: 1726822962}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (22)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4038,9 +3938,9 @@ GameObject:
   - component: {fileID: 1812402686}
   - component: {fileID: 1812402688}
   - component: {fileID: 1812402687}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (38)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4138,9 +4038,9 @@ GameObject:
   - component: {fileID: 1842073475}
   - component: {fileID: 1842073477}
   - component: {fileID: 1842073476}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (36)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4243,9 +4143,9 @@ GameObject:
   - component: {fileID: 1980937365}
   - component: {fileID: 1980937367}
   - component: {fileID: 1980937366}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (4)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4347,7 +4247,7 @@ GameObject:
   - component: {fileID: 2001345753}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: tank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4508,9 +4408,9 @@ GameObject:
   - component: {fileID: 2077728210}
   - component: {fileID: 2077728212}
   - component: {fileID: 2077728211}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (26)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4608,9 +4508,9 @@ GameObject:
   - component: {fileID: 2089333769}
   - component: {fileID: 2089333771}
   - component: {fileID: 2089333770}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite (19)
-  m_TagString: Untagged
+  m_TagString: wally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4712,7 +4612,7 @@ GameObject:
   - component: {fileID: 2104740872}
   m_Layer: 8
   m_Name: yeller tank
-  m_TagString: Untagged
+  m_TagString: tank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

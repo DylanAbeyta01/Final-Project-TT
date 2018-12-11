@@ -5,6 +5,8 @@ using UnityEngine;
 public class player1 : MonoBehaviour
 {
     float speed = 2;
+    float fricSpeed = 1.5f;
+    float curSpeed = 2;
     Vector3 velocity = new Vector3(0, 0, 0);
     Rigidbody2D rbody;
     public GameObject BulletPrefab;
@@ -44,7 +46,14 @@ public class player1 : MonoBehaviour
         }
 
         velocity.Normalize();
-        rbody.velocity = velocity * speed;
+        if (Input.GetKey(KeyCode.D))
+        {
+            rbody.velocity = velocity * (curSpeed - 1.15f);
+        }
+        else
+        {
+            rbody.velocity = velocity * curSpeed;
+        }
     }
     public Vector3 LookAtDirection(float eulerAnglesZ)
     {
