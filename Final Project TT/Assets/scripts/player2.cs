@@ -42,6 +42,10 @@ public class player2 : MonoBehaviour
         {
             velocity -= LookAtDirection(transform.eulerAngles.z - 90);
         }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            ShootBallsPlayer2();
+        }
 
         velocity.Normalize();
         rbody.velocity = velocity * speed;
@@ -51,14 +55,10 @@ public class player2 : MonoBehaviour
         return new Vector3(Mathf.Cos(eulerAnglesZ * Mathf.Deg2Rad), Mathf.Sin(eulerAnglesZ * Mathf.Deg2Rad), 0);
     }
 
-    void ShootBalls()
+    void ShootBallsPlayer2()
     {
-        transform.position += velocity * Time.deltaTime * speed;
-
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            GameObject newBullet = Instantiate(BulletPrefab);
-            newBullet.GetComponent<Bullet>().Initialize(transform.position, LookAtDirection(transform.eulerAngles.z - 90), Color.green);
-        }
+        GameObject newBullet = Instantiate(BulletPrefab);
+        newBullet.GetComponent<Bullet>().Initialize(transform.position + .3f * (LookAtDirection(transform.eulerAngles.z - 90).normalized),
+            LookAtDirection(transform.eulerAngles.z - 90), Color.yellow);
     }
 }
