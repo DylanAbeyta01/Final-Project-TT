@@ -2613,6 +2613,10 @@ Prefab:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1311300295825868, guid: b3a4f63e336b5f84d86eed1b1dd1ff35, type: 2}
+      propertyPath: m_TagString
+      value: tank
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b3a4f63e336b5f84d86eed1b1dd1ff35, type: 2}
   m_IsPrefabParent: 0
@@ -2666,6 +2670,10 @@ Prefab:
     - target: {fileID: 1275667555337090, guid: 094d78d97f7847b4b9296e57d44ea185, type: 2}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275667555337090, guid: 094d78d97f7847b4b9296e57d44ea185, type: 2}
+      propertyPath: m_TagString
+      value: tank
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 094d78d97f7847b4b9296e57d44ea185, type: 2}
