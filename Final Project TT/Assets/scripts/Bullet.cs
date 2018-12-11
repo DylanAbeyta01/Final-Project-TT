@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    float timer = 0;
+    float timeToAction = 3;
     public Vector3 velocity = new Vector3(0, 0, 0);
     public GameObject BulletPrefab;
     float speed = 3f;
@@ -20,17 +22,23 @@ public class Bullet : MonoBehaviour
     /// <param name="position">Position to spawn</param>
     /// <param name="velocity">Direction * speed</param>
     /// <param name="color">Color of the ball</param>
-    
+    /// 
+    void Update()
+    {
+        timer += Time.deltaTime;
+
+        if (timer >= timeToAction)
+        {
+            GameObject.DestroyImmediate(this.gameObject);
+            timer = 0;
+        }
+    }
+
     public void Initialize(Vector3 position, Vector3 velocity, Color color)
     {
         this.transform.position = position;
         this.velocity = velocity;
         GetComponent<SpriteRenderer>().color = color;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        transform.position += velocity * Time.deltaTime * speed;
+        GetComponent<Rigidbody2D>().velocity = velocity * speed;
     }
 }

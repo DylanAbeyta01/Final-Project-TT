@@ -46,7 +46,7 @@ public class player1 : MonoBehaviour
         {
             ShootBallsPlayer1();
         }
-
+        
         velocity.Normalize();
         rbody.velocity = velocity * speed;
     }
@@ -60,10 +60,5 @@ public class player1 : MonoBehaviour
         GameObject newBullet = Instantiate(BulletPrefab);
         newBullet.GetComponent<Bullet>().Initialize(transform.position + .3f * (LookAtDirection(transform.eulerAngles.z - 90).normalized), 
             LookAtDirection(transform.eulerAngles.z - 90), Color.green);
-
-        if (Time.deltaTime > 2)
-        {
-            GameObject.DestroyImmediate(BulletPrefab);
-        }
     } 
 }
