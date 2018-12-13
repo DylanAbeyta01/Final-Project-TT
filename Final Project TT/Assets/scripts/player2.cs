@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class player2 : MonoBehaviour
 {
+    List<GameObject> bullets = new List<GameObject>();
     float speed = 2;
     Vector3 velocity = new Vector3(0, 0, 0);
     Rigidbody2D rbody;
@@ -15,7 +16,7 @@ public class player2 : MonoBehaviour
     }
 
     // Use this for initialization
-    void Start() 
+    void Start()
     {
         rbody = GetComponent<Rigidbody2D>();
     }
@@ -54,16 +55,29 @@ public class player2 : MonoBehaviour
         {
             velocity -= LookAtDirection(transform.eulerAngles.z - 90);
         }
-        if (Input.GetKeyDown(KeyCode.M))
+
+        for (int i = bullets.Count - 1; i >= 0; i--)
         {
-            ShootBallsPlayer2();
+            if (bullets[i] == null)
+            {
+                bullets.RemoveAt(i);
+            }
+        }
+
+        if (bullets.Count < 5)
+        {
+            if (Input.GetKeyDown(KeyCode.M))
+            {
+                ShootBallsPlayer2();
+            }
         }
 
         velocity.Normalize();
+
         if (Input.GetKey(KeyCode.DownArrow))
         {
             rbody.velocity = velocity * (speed - 1.15f);
-        }                     
+        }
         else
         {
             rbody.velocity = velocity * speed;
@@ -80,5 +94,7 @@ public class player2 : MonoBehaviour
         GameObject newBullet = Instantiate(BulletPrefab);
         newBullet.GetComponent<Bullet>().Initialize(transform.position + .3f * (LookAtDirection(transform.eulerAngles.z - 90).normalized),
             LookAtDirection(transform.eulerAngles.z - 90), Color.yellow);
+
+        bullets.Add(newBullet);
     }
 }

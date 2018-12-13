@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class player1 : MonoBehaviour
 {
+    List<GameObject> bullets = new List<GameObject>();
     float speed = 2;
     float fricSpeed = 1.5f;
     float curSpeed = 2;
@@ -44,12 +45,25 @@ public class player1 : MonoBehaviour
         {
             velocity -= LookAtDirection(transform.eulerAngles.z - 90);
         }
-        if (Input.GetKeyDown(KeyCode.Q))
+
+        for (int i = bullets.Count-1; i >= 0; i--)
         {
-            ShootBallsPlayer1();
+            if (bullets[i] == null)
+            {
+                bullets.RemoveAt(i);
+            }
         }
-        
+
+        if (bullets.Count < 5)
+        {
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                ShootBallsPlayer1();
+            }
+        }
+
         velocity.Normalize();
+
         if (Input.GetKey(KeyCode.D))
         {
             rbody.velocity = velocity * (curSpeed - 1.15f);
@@ -59,6 +73,7 @@ public class player1 : MonoBehaviour
             rbody.velocity = velocity * curSpeed;
         }
     }
+
     public Vector3 LookAtDirection(float eulerAnglesZ)
     {
         return new Vector3(Mathf.Cos(eulerAnglesZ * Mathf.Deg2Rad), Mathf.Sin(eulerAnglesZ * Mathf.Deg2Rad), 0);
@@ -67,7 +82,9 @@ public class player1 : MonoBehaviour
     void ShootBallsPlayer1()
     {
         GameObject newBullet = Instantiate(BulletPrefab);
-        newBullet.GetComponent<Bullet>().Initialize(transform.position + .3f * (LookAtDirection(transform.eulerAngles.z - 90).normalized), 
+        newBullet.GetComponent<Bullet>().Initialize(transform.position + .3f * (LookAtDirection(transform.eulerAngles.z - 90).normalized),
             LookAtDirection(transform.eulerAngles.z - 90), Color.green);
-    } 
+
+        bullets.Add(newBullet);
+    }
 }
