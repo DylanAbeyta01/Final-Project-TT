@@ -88,9 +88,10 @@ public class player1 : MonoBehaviour
 
         if (collision.collider.tag == "bullet")
         {
-            score2++;
-            Random rand = new Random();
-            int rand1to5 = rand.Next(1, 4);
+            do
+            { 
+                Random rand = new Random();
+                int rand1to5 = rand.Next(1, 4);
 
                 SceneManager.LoadScene("Map " + rand1to5);
                 timer = 0;               
