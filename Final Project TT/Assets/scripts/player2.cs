@@ -24,18 +24,6 @@ public class player2 : MonoBehaviour
         rbody = GetComponent<Rigidbody2D>();
     }
 
-    //void OnCollisionEnter(Collision col)
-    //{
-    //    if (col.gameObject.name == "wally")
-    //    {
-    //        rbody.velocity = velocity * (speed - 1.15f);
-    //    }
-    //}
-    //void OnCollisionExit(Collision collisionInfo)
-    //{
-    //    rbody.velocity = velocity * speed;
-    //}
-
     // Update is called once per frame
     void Update()
     {
@@ -96,8 +84,6 @@ public class player2 : MonoBehaviour
 
         if (collision.collider.tag == "bullet")
         {
-            GameObject.DestroyImmediate(this.gameObject);
-
             score1++;
             Random rand = new Random();
             int rand1to5 = rand.Next(1, 3);

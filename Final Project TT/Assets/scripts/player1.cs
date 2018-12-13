@@ -87,11 +87,9 @@ public class player1 : MonoBehaviour
 
         if (collision.collider.tag == "bullet")
         {
-            GameObject.DestroyImmediate(this.gameObject);
-
-            score2 ++;
+            score2++;
             Random rand = new Random();
-            int rand1to5 = rand.Next(1, 3);
+            int rand1to5 = rand.Next(1, 4);
 
             SceneManager.LoadScene("Map " + rand1to5);
         }
