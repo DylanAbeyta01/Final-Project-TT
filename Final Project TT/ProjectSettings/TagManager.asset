@@ -6,6 +6,7 @@ TagManager:
   tags:
   - tank
   - wally
+  - bullet
   layers:
   - Default
   - TransparentFX

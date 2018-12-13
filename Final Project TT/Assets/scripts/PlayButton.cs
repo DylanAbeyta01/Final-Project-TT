@@ -22,7 +22,7 @@ public class PlayButton : MonoBehaviour
     public void OnButtonClick()
     {
         Random rand = new Random();
-        int rand1to5 = rand.Next(1, 2);
+        int rand1to5 = rand.Next(1, 3);
         
         SceneManager.LoadScene("Map " + rand1to5);
     }
