@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     float timer = 0;
-    float timeToAction = 3;
+    float timeToAction = 5;
     public Vector3 velocity = new Vector3(0, 0, 0);
     public GameObject BulletPrefab;
     float speed = 3f;

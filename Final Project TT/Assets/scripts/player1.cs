@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using Random = System.Random;
 
 public class player1 : MonoBehaviour
 {
@@ -8,6 +10,7 @@ public class player1 : MonoBehaviour
     float speed = 2;
     float fricSpeed = 1.5f;
     float curSpeed = 2;
+    int score2 = 0;
     Vector3 velocity = new Vector3(0, 0, 0);
     Rigidbody2D rbody;
     public GameObject BulletPrefab;
@@ -71,6 +74,26 @@ public class player1 : MonoBehaviour
         else
         {
             rbody.velocity = velocity * curSpeed;
+        }
+    
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "wally")
+        {
+            rbody.velocity = velocity * (curSpeed - 1.5f);
+        }
+
+        if (collision.collider.tag == "bullet")
+        {
+            GameObject.DestroyImmediate(this.gameObject);
+
+            score2 ++;
+            Random rand = new Random();
+            int rand1to5 = rand.Next(1, 3);
+
+            SceneManager.LoadScene("Map " + rand1to5);
         }
     }
 
