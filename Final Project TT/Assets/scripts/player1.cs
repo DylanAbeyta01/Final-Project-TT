@@ -7,10 +7,11 @@ using Random = System.Random;
 public class player1 : MonoBehaviour
 {
     List<GameObject> bullets = new List<GameObject>();
+    float timer = 0;
+    float timeToAction = 10;
     float speed = 2;
     float fricSpeed = 1.5f;
     float curSpeed = 2;
-    int score2 = 0;
     Vector3 velocity = new Vector3(0, 0, 0);
     Rigidbody2D rbody;
     public GameObject BulletPrefab;
@@ -88,12 +89,17 @@ public class player1 : MonoBehaviour
         if (collision.collider.tag == "bullet")
         {
             GameObject.DestroyImmediate(this.gameObject);
+            timer += Time.deltaTime;
 
-            score2 ++;
-            Random rand = new Random();
-            int rand1to5 = rand.Next(1, 3);
+            do
+            {               
+                Random rand = new Random();
+                int rand1to5 = rand.Next(1, 3);
 
-            SceneManager.LoadScene("Map " + rand1to5);
+                SceneManager.LoadScene("Map " + rand1to5);
+                timer = 0;               
+
+            } while (timer == timeToAction);            
         }
     }
 
