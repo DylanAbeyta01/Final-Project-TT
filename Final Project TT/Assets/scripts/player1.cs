@@ -104,6 +104,7 @@ public class player1 : MonoBehaviour
         if (collision.collider.tag == "bullet")
         {
             isCounting = true;
+            GameManager.Instance.score2++;
             GetComponent<SpriteRenderer>().sprite = null;
             GetComponent<BoxCollider2D>().enabled = false;
         }

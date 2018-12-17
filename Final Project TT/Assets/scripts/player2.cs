@@ -60,7 +60,7 @@ public class player2 : MonoBehaviour
 
         if (bullets.Count < 5)
         {
-            if (Input.GetKeyDown(KeyCode.M))
+            if (Input.GetKeyDown(KeyCode.M) && !isCounting)
             {
                 ShootBallsPlayer2();
             }
@@ -102,6 +102,7 @@ public class player2 : MonoBehaviour
         if (collision.collider.tag == "bullet")
         {
             isCounting = true;
+            GameManager.Instance.score1++;
             GetComponent<SpriteRenderer>().sprite = null;
             GetComponent<BoxCollider2D>().enabled = false;
         }
