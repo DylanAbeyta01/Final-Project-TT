@@ -33,7 +33,7 @@ public class GameManager
         player1Score.text = ("Player 1: " + score1);
 
         player2Score = GameObject.Find("player2Score").GetComponent<Text>();
-        player2Score.text = ("Player 2: " + score2);
+        player2Score.text = ("Player 2: 1" + score2);
     }
 
     private void Update()

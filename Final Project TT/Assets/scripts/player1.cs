@@ -8,7 +8,7 @@ public class player1 : MonoBehaviour
 {
     List<GameObject> bullets = new List<GameObject>();
     float timer = 0;
-    float timeToAction = 10;
+    float timeToAction = 3;
     float speed = 2;
     float fricSpeed = 1.5f;
     float curSpeed = 2;
@@ -79,6 +79,21 @@ public class player1 : MonoBehaviour
     
     }
 
+    public void actiontimer()
+    {
+        timer += Time.deltaTime;
+
+        do
+        {
+            Random rand = new Random();
+            int rand1to5 = rand.Next(1, 4);
+
+            SceneManager.LoadScene("Map " + rand1to5);
+            timer = 0;
+
+        } while (timer == timeToAction);
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.tag == "wally")
@@ -88,15 +103,8 @@ public class player1 : MonoBehaviour
 
         if (collision.collider.tag == "bullet")
         {
-            do
-            { 
-                Random rand = new Random();
-                int rand1to5 = rand.Next(1, 4);
-
-                SceneManager.LoadScene("Map " + rand1to5);
-                timer = 0;               
-
-            } while (timer == timeToAction);            
+            GameObject.DestroyImmediate(this.gameObject);
+            actiontimer();          
         }
     }
 

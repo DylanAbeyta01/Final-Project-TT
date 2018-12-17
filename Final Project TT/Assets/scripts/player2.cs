@@ -8,6 +8,8 @@ public class player2 : MonoBehaviour
 {
     List<GameObject> bullets = new List<GameObject>();
     float speed = 2;
+    float timer = 0;
+    float timeToAction = 3;
     public static int score1 = 0;
     Vector3 velocity = new Vector3(0, 0, 0);
     Rigidbody2D rbody;
@@ -75,6 +77,21 @@ public class player2 : MonoBehaviour
         }
     } 
 
+    public void actiontimer()
+    {
+        timer += Time.deltaTime;
+
+        do
+        {
+            Random rand = new Random();
+            int rand1to5 = rand.Next(1, 4);
+
+            SceneManager.LoadScene("Map " + rand1to5);
+            timer = 0;
+
+        } while (timer == timeToAction);
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.tag == "wally")
@@ -84,13 +101,8 @@ public class player2 : MonoBehaviour
 
         if (collision.collider.tag == "bullet")
         {
-            score1++;
-            Random rand = new Random();
-            int rand1to5 = rand.Next(1, 3);
-
-            SceneManager.LoadScene("Map " + rand1to5);
-        }
-        
+            actiontimer();
+        }       
     }
 
     public Vector3 LookAtDirection(float eulerAnglesZ)
