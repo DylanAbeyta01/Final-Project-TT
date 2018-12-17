@@ -38,8 +38,8 @@ public class GameManager
         player1Score = GameObject.Find("player1Score").GetComponent<Text>();    
         player2Score = GameObject.Find("player2Score").GetComponent<Text>();
 
-        player1Score.text = ("Player 1: " + score1);
-        player2Score.text = ("Player 2: " + score2);
+        player1Score.text = ("Green Tank: " + score1);
+        player2Score.text = ("Yellow Tank: " + score2);
     }
 
     //Internal class used to update the GameManager since GameManager doesn't inherit from MonoBehaviour
