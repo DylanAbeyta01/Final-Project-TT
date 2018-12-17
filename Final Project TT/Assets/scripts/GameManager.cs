@@ -19,21 +19,25 @@ public class GameManager
     { get; set; }
 
     public Text player1Score { get; set; }
-    public Text player2Score { get; set;  }
-   
-    int score1;
-    int score2;
+    public Text player2Score { get; set; }
+
+    public int score1;
+    public int score2;  
 
     // Because we only ever want one, we must make a PRIVATE constructor, not a public constructor
     private GameManager()
     {
+        if ()
+        {
+
+        }
         //Create a new object with a script of type Updater to update the GameManager
         Object.DontDestroyOnLoad(new GameObject("Updater", typeof(Updater)));
         player1Score = GameObject.Find("player1Score").GetComponent<Text>();
         player1Score.text = ("Player 1: " + score1);
 
         player2Score = GameObject.Find("player2Score").GetComponent<Text>();
-        player2Score.text = ("Player 2: 1" + score2);
+        player2Score.text = ("Player 2: " + score2);
     }
 
     private void Update()
