@@ -102,6 +102,7 @@ public class player2 : MonoBehaviour
         {
             Destroy(collision.collider.gameObject);
             isCounting = true;
+            GameManager.Instance.score1++;
             GetComponent<SpriteRenderer>().sprite = null;
             GetComponent<BoxCollider2D>().enabled = false;
         }

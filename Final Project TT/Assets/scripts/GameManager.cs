@@ -21,24 +21,25 @@ public class GameManager
     public Text player1Score { get; set; }
     public Text player2Score { get; set; }
 
-    public int score1;
-    public int score2;  
+    public int score1 = 0;
+    public int score2 = 0;  
 
     // Because we only ever want one, we must make a PRIVATE constructor, not a public constructor
     private GameManager()
     {
+      
         //Create a new object with a script of type Updater to update the GameManager
-        Object.DontDestroyOnLoad(new GameObject("Updater", typeof(Updater)));
-        player1Score = GameObject.Find("player1Score").GetComponent<Text>();
-        player1Score.text = ("Player 1: " + score1);
-
-        player2Score = GameObject.Find("player2Score").GetComponent<Text>();
-        player2Score.text = ("Player 2: " + score2);
+        Object.DontDestroyOnLoad(new GameObject("Updater", typeof(Updater)));     
     }
 
     private void Update()
     {
         //Game logic would go here like managing time, level resets, etc.
+        player1Score = GameObject.Find("player1Score").GetComponent<Text>();    
+        player2Score = GameObject.Find("player2Score").GetComponent<Text>();
+
+        player1Score.text = ("Player 1: " + score1);
+        player2Score.text = ("Player 2: " + score2);
     }
 
     //Internal class used to update the GameManager since GameManager doesn't inherit from MonoBehaviour
