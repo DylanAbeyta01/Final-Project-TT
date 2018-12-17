@@ -27,10 +27,6 @@ public class GameManager
     // Because we only ever want one, we must make a PRIVATE constructor, not a public constructor
     private GameManager()
     {
-        if ()
-        {
-
-        }
         //Create a new object with a script of type Updater to update the GameManager
         Object.DontDestroyOnLoad(new GameObject("Updater", typeof(Updater)));
         player1Score = GameObject.Find("player1Score").GetComponent<Text>();

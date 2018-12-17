@@ -2,17 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Threading;
 using Random = System.Random;
 
 public class player1 : MonoBehaviour
 {
     List<GameObject> bullets = new List<GameObject>();
     float timer = 0;
-    float timeToAction = 2;
+    float timeToAction = 5;
     float speed = 2;
-    float fricSpeed = 1.5f;
-    float curSpeed = 2;
     bool isCounting = false;
     Vector3 velocity = new Vector3(0, 0, 0);
     Rigidbody2D rbody;
@@ -72,11 +69,11 @@ public class player1 : MonoBehaviour
 
         if (Input.GetKey(KeyCode.D))
         {
-            rbody.velocity = velocity * (curSpeed - 1.15f);
+            rbody.velocity = velocity * (speed - 1.15f);
         }
         else
         {
-            rbody.velocity = velocity * curSpeed;
+            rbody.velocity = velocity * speed;
         }
 
         if (isCounting == true)
@@ -98,11 +95,12 @@ public class player1 : MonoBehaviour
     {
         if (collision.collider.tag == "wally")
         {
-            rbody.velocity = velocity * (curSpeed - 1.5f);
+            rbody.velocity = velocity * (speed - 1.5f);
         }
 
         if (collision.collider.tag == "bullet")
         {
+            Destroy(collision.collider.gameObject);
             isCounting = true;
             GetComponent<SpriteRenderer>().sprite = null;
             GetComponent<BoxCollider2D>().enabled = false;

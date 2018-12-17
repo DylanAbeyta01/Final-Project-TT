@@ -7,11 +7,10 @@ using Random = System.Random;
 public class player2 : MonoBehaviour
 {
     List<GameObject> bullets = new List<GameObject>();
-    float speed = 2;
     float timer = 0;
-    float timeToAction = 2;
+    float timeToAction = 5;
+    float speed = 2;
     bool isCounting = false;
-    public static int score1 = 0;
     Vector3 velocity = new Vector3(0, 0, 0);
     Rigidbody2D rbody;
     public GameObject BulletPrefab;
@@ -60,7 +59,7 @@ public class player2 : MonoBehaviour
 
         if (bullets.Count < 5)
         {
-            if (Input.GetKeyDown(KeyCode.M))
+            if (Input.GetKeyDown(KeyCode.M) && !isCounting)
             {
                 ShootBallsPlayer2();
             }
@@ -101,6 +100,7 @@ public class player2 : MonoBehaviour
 
         if (collision.collider.tag == "bullet")
         {
+            Destroy(collision.collider.gameObject);
             isCounting = true;
             GetComponent<SpriteRenderer>().sprite = null;
             GetComponent<BoxCollider2D>().enabled = false;

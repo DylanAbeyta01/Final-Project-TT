@@ -29,7 +29,7 @@ public class Bullet : MonoBehaviour
 
         if (timer >= timeToAction)
         {
-            GameObject.DestroyImmediate(this.gameObject);
+            DestroyImmediate(gameObject);
             timer = 0;
         }
     }
