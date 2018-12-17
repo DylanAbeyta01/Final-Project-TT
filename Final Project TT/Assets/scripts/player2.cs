@@ -8,6 +8,9 @@ public class player2 : MonoBehaviour
 {
     List<GameObject> bullets = new List<GameObject>();
     float speed = 2;
+    float timer = 0;
+    float timeToAction = 2;
+    bool isCounting = false;
     public static int score1 = 0;
     Vector3 velocity = new Vector3(0, 0, 0);
     Rigidbody2D rbody;
@@ -73,6 +76,20 @@ public class player2 : MonoBehaviour
         {
             rbody.velocity = velocity * speed;
         }
+
+        if (isCounting == true)
+        {
+            timer += Time.deltaTime;
+
+            if (timer >= timeToAction)
+            {
+                Random rand = new Random();
+                int rand1to5 = rand.Next(1, 4);
+
+                SceneManager.LoadScene("Map " + rand1to5);
+                timer = 0;
+            }
+        }
     } 
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -84,13 +101,10 @@ public class player2 : MonoBehaviour
 
         if (collision.collider.tag == "bullet")
         {
-            score1++;
-            Random rand = new Random();
-            int rand1to5 = rand.Next(1, 3);
-
-            SceneManager.LoadScene("Map " + rand1to5);
+            isCounting = true;
+            GetComponent<SpriteRenderer>().sprite = null;
+            GetComponent<BoxCollider2D>().enabled = false;
         }
-        
     }
 
     public Vector3 LookAtDirection(float eulerAnglesZ)

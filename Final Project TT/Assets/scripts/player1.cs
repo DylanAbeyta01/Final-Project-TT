@@ -2,16 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Threading;
 using Random = System.Random;
 
 public class player1 : MonoBehaviour
 {
     List<GameObject> bullets = new List<GameObject>();
     float timer = 0;
-    float timeToAction = 10;
+    float timeToAction = 2;
     float speed = 2;
     float fricSpeed = 1.5f;
     float curSpeed = 2;
+    bool isCounting = false;
     Vector3 velocity = new Vector3(0, 0, 0);
     Rigidbody2D rbody;
     public GameObject BulletPrefab;
@@ -50,7 +52,7 @@ public class player1 : MonoBehaviour
             velocity -= LookAtDirection(transform.eulerAngles.z - 90);
         }
 
-        for (int i = bullets.Count-1; i >= 0; i--)
+        for (int i = bullets.Count - 1; i >= 0; i--)
         {
             if (bullets[i] == null)
             {
@@ -60,7 +62,7 @@ public class player1 : MonoBehaviour
 
         if (bullets.Count < 5)
         {
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.Q) && !isCounting)
             {
                 ShootBallsPlayer1();
             }
@@ -76,7 +78,20 @@ public class player1 : MonoBehaviour
         {
             rbody.velocity = velocity * curSpeed;
         }
+
+        if (isCounting == true)
+        {
+            timer += Time.deltaTime;
+
+            if (timer >= timeToAction)
+            {
+                Random rand = new Random();
+                int rand1to5 = rand.Next(1, 4);
     
+                SceneManager.LoadScene("Map " + rand1to5);
+                timer = 0;
+            }
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -88,15 +103,9 @@ public class player1 : MonoBehaviour
 
         if (collision.collider.tag == "bullet")
         {
-            do
-            { 
-                Random rand = new Random();
-                int rand1to5 = rand.Next(1, 4);
-
-                SceneManager.LoadScene("Map " + rand1to5);
-                timer = 0;               
-
-            } while (timer == timeToAction);            
+            isCounting = true;
+            GetComponent<SpriteRenderer>().sprite = null;
+            GetComponent<BoxCollider2D>().enabled = false;
         }
     }
 
