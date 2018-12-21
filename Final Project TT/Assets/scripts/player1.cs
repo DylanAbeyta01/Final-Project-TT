@@ -69,7 +69,7 @@ public class player1 : MonoBehaviour
 
         if (Input.GetKey(KeyCode.D))
         {
-            rbody.velocity = velocity * (speed - 1.15f);
+            rbody.velocity = velocity * (speed - 1f);
         }
         else
         {

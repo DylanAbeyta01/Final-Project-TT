@@ -69,7 +69,7 @@ public class player2 : MonoBehaviour
 
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            rbody.velocity = velocity * (speed - 1.15f);
+            rbody.velocity = velocity * (speed - 1f);
         }
         else
         {
